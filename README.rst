@@ -66,6 +66,20 @@ Search
   item.get_avg_rating()
   item.get_num_ratings()
 
+  # Search 'Family Guy Season 1'
+  item = itunes.search_season('Family Guy Season 1')
+  item.get_name()
+  item.get_copyright()
+
+  # Search 'Episode 5 of Family Guy Season 1'
+  items = itunes.search_episode('Family Guy Season 1')
+  for ep in items:
+      if ep.get_episode_num() == 5:
+          print ep.get_name()
+          print ep.get_short_description()
+          print ep.get_long_description()
+          print ep.get_release_date()
+
 Lookup
 ~~~~~~
 
