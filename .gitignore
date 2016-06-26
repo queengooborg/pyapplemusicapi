@@ -40,3 +40,6 @@ nosetests.xml
 
 # Virtual environments
 venv
+
+# Documentation
+docs/_build
