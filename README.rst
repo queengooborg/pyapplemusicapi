@@ -29,7 +29,9 @@ Examples
 
 Search
 ~~~~~~
+
 ::
+
   from __future__ import print_function
   import itunes
 
