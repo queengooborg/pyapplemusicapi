@@ -7,6 +7,7 @@ __all__ = ['search_track', 'search_album', 'search_artist', 'search_app',
            'search_episode', 'search_season', 'search', 'search_movie',
            'Search']
 
+
 def search_track(query, limit=100, offset=0, order=None, store=COUNTRY):
     """Search for a track resource
 

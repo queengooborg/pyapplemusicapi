@@ -2,6 +2,7 @@
 """This module contains base data models for the rest of the iTunes store API
 """
 import requests
+import sys
 from cachecontrol import CacheControl
 from datetime import datetime
 from itunes import HOST_NAME
@@ -166,8 +167,11 @@ class Resource(object):
     def __repr__(self):
         if not self.name:
             return '<{type}>: {id}'.format(type=self.type.title(), id=self.id)
-        return '<{type}>: {name}'.format(type=self.type.title(),
-                                         name=self.name)
+
+        name = self.name
+        if sys.version_info[0] == 2:
+            name = self.name.encode('utf8')
+        return '<{type}>: {name}'.format(type=self.type.title(), name=name)
 
     def __eq__(self, other):
         return self.id == other.id
