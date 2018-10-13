@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 """This module contains base data models for the rest of the iTunes store API
 """
+
 import requests
 import sys
 from cachecontrol import CacheControl
 from datetime import datetime
 from itunes import HOST_NAME
+
 __all__ = ['TS_FORMAT', 'SESSION', 'ITunesException', 'BaseObject', 'Resource',
            'NoResultsFoundException', 'Artist', 'Album', 'Track', 'Audiobook',
            'Software', 'TVEpisode']
+
 #: iTunes API Timestamp format
 TS_FORMAT = '%Y-%m-%dT%H:%M:%S'
 

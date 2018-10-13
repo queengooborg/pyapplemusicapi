@@ -2,7 +2,9 @@
 """This module contains utilities for performing a variety of different
 searches against the iTunes store API
 """
+
 from itunes import COUNTRY, API_VERSION, BaseObject
+
 __all__ = ['search_track', 'search_album', 'search_artist', 'search_app',
            'search_episode', 'search_season', 'search', 'search_movie',
            'Search']
