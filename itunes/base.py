@@ -177,6 +177,7 @@ class Resource(object):
         return '<{type}>: {name}'.format(type=self.type.title(), name=name)
 
     def __eq__(self, other):
+        if not hasattr(other, 'id'): return False
         return self.id == other.id
 
     def __ne__(self, other):
