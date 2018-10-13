@@ -23,3 +23,22 @@ def lookup(id):
     if not items:
         raise NoResultsFoundException()
     return items[0]
+
+
+class LookupUPC(BaseObject):
+    """A data model for an individual resource look up against iTunes"""
+    resource = 'lookup'
+
+    def __init__(self, upc, entity=None, limit=50):
+        super(self.__class__, self).__init__(upc=upc, entity=entity, limit=limit)
+        self.upc = upc
+
+
+def lookup_upc(upc):
+    """Perform an individual :class:`LookupUPC` on a single resource in the iTunes
+    Store API
+    """
+    items = Lookup(upc).get()
+    if not items:
+        raise NoResultsFoundException()
+    return items[0]
