@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """This module contains utilities for performing a variety of different
-searches against the iTunes store API
+lookups against the iTunes store API
 """
 from itunes import COUNTRY, API_VERSION, BaseObject
 __all__ = ['lookup', 'lookup_upc', 'Lookup', 'LookupUPC']
