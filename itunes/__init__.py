@@ -4,11 +4,11 @@
 version_info = (1, 0, 2)
 __name__ = 'itunes'
 __doc__ = 'A python interface to search iTunes Store'
-__author__ = ['Jonathan Nappi', 'Oscar Celma', 'Vinyl Darkscratch']
+__author__ = ['Vinyl Darkscratch', 'Jonathan Nappi', 'Oscar Celma']
 __version__ = '.'.join([str(i) for i in version_info])
 __license__ = 'GPL'
 __maintainer__ = 'Vinyl Darkscratch'
-__email__ = ['moogar@comcast.net', 'ocelma@bmat.com', 'vinyldarkscratch@gooborg.com']
+__email__ = ['vinyldarkscratch@gooborg.com', 'moogar@comcast.net', 'ocelma@bmat.com']
 __status__ = 'Stable'
 
 #: iTunes API version
