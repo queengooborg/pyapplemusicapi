@@ -209,15 +209,6 @@ class Resource(object):
         return items[1]
 
 
-class Lookup(BaseObject):
-    """A data model for an individual resource look up against iTunes"""
-    resource = 'lookup'
-
-    def __init__(self, id, entity=None, limit=50):
-        super(self.__class__, self).__init__(id=id, entity=entity, limit=limit)
-        self.id = id
-
-
 class Artist(Resource):
     """The Artist :class:`Resource` represents an iTunes artist"""
 
@@ -345,13 +336,3 @@ class TVEpisode(Track):
         self.show_id = json.get('artistId', None)
         self.season = json.get('collectionName', None)[-1:]
         self.season_id = json.get('collectionId', None)
-
-
-def lookup(id):
-    """Perform an individual :class:`Lookup` on a single resource in the iTunes
-    Store API
-    """
-    items = Lookup(id).get()
-    if not items:
-        raise NoResultsFoundException()
-    return items[0]
