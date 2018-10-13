@@ -10,7 +10,7 @@ To install with `pip <http://www.pip-installer.org/>`_, just run this in your te
 
     $ pip install pyitunes
 
-Or clone the code from `Github <https://github.com/moogar0880/python-itunes>`_ and::
+Or clone the code from `Github <https://github.com/vinyldarkscratch/python-itunes>`_ and::
 
     $ python setup.py install
 
@@ -68,7 +68,7 @@ Search
       if ep.episode_number == 5:
           vars(ep)
 
-Lookup
+Lookup by iTunes ID
 ~~~~~~
 
 ::
@@ -91,6 +91,23 @@ Lookup
 
   artist = track.artist
   album = track.get_album()
+
+Lookup by UPC
+~~~~~~
+
+::
+
+  import itunes
+
+  # Lookup Arcade EP by glitch_d using UPC
+  ARCADE_EP_UPC = 5057917815772
+  album = itunes.lookup_upc(ARCADE_EP_UPC)
+
+  print(album.url)
+  print(album.artwork)
+
+  artist = album.artist
+  tracks = album.get_tracks()
 
 Tests
 -----
