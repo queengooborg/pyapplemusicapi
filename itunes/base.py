@@ -310,8 +310,13 @@ class Software(Track):
         self.genres = json.get('genres', None)
         self.seller_url = json.get('sellerUrl', None)
         self.languages = json.get('languageCodesISO2A', None)
+        self.file_size_bytes = json.get('fileSizeBytes', 0)
+        self.bundle_id = json.get('bundleId', None)
+        self.release_notes = json.get('releaseNotes', None)
+        self.primary_genre_id = json.get('primaryGenreId', 0)
 
         self._set_ratings(json)
+        self._set_current_version_release_date(json)
 
     def _set_ratings(self, json):
         k = 'averageUserRatingForCurrentVersion'
@@ -320,6 +325,11 @@ class Software(Track):
         k = 'userRatingCountForCurrentVersion'
         self.ratings['num']['current'] = json.get(k, None)
         self.ratings['num']['all'] = json.get('userRatingCount', None)
+
+    def _set_current_version_release_date(self, json):
+        self.current_version_release_date = None
+        if json.has_key('currentVersionReleaseDate') and json['currentVersionReleaseDate']:
+            self.current_version_release_date = datetime.strptime(json['currentVersionReleaseDate'], TS_FORMAT)
 
 
 class TVEpisode(Track):
