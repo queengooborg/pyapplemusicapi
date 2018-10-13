@@ -38,7 +38,7 @@ def lookup_upc(upc):
     """Perform an individual :class:`LookupUPC` on a single resource in the iTunes
     Store API
     """
-    items = Lookup(upc).get()
+    items = LookupUPC(upc).get()
     if not items:
         raise NoResultsFoundException()
     return items[0]

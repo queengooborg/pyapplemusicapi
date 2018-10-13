@@ -7,8 +7,8 @@ from cachecontrol import CacheControl
 from datetime import datetime
 from itunes import HOST_NAME
 __all__ = ['TS_FORMAT', 'SESSION', 'ITunesException', 'BaseObject', 'Resource',
-           'NoResultsFoundException', 'Lookup', 'Artist', 'Album', 'Track',
-           'Audiobook', 'Software', 'TVEpisode', 'lookup']
+           'NoResultsFoundException', 'Artist', 'Album', 'Track', 'Audiobook',
+           'Software', 'TVEpisode']
 #: iTunes API Timestamp format
 TS_FORMAT = '%Y-%m-%dT%H:%M:%S'
 
