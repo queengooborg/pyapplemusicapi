@@ -22,6 +22,7 @@ HOST_NAME = 'https://itunes.apple.com/'
 
 try:
     from itunes.base import *  # NOQA
+    from itunes.lookup import *  # NOQA
     from itunes.search import *  # NOQA
 except ImportError:
     pass  # Assume we're installing if we can't import search functions
