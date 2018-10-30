@@ -5,11 +5,11 @@ API]
 
 ## Installation
 
-To install with [pip], just run this in your terminal:
+To install with `pip`, just run this in your terminal:
 
-    $ pip install pyitunes
+    $ pip install pitunes
 
-Or clone the code from [Github] and:
+Or clone the code from [Github](https://github.com/vinyldarkscratch/pitunes) and:
 
     $ python setup.py install
 
@@ -105,6 +105,8 @@ tracks = album.get_tracks()
 
     $ py.test tests
 
-  [iTunes Store API]: http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
-  [pip]: http://www.pip-installer.org/
-  [Github]: https://github.com/vinyldarkscratch/python-itunes
+## References
+
+- [iTunes Store API](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [pip](http://www.pip-installer.org/)
+- [Github](https://github.com/vinyldarkscratch/python-itunes)
