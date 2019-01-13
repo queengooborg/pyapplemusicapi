@@ -57,7 +57,10 @@ class BaseObject(object):
         appropriate assortment of :class:`Resource`'s based on the response
         """
         response = SESSION.get(self.url, params=self._search_terms)
-        self.json = response.json()
+        try:
+            self.json = response.json()
+        except:
+            raise NoResultsFoundException()
 
         if 'errorMessage' in self.json:
             raise ITunesException(self.json['errorMessage'])
