@@ -4,7 +4,7 @@ lookups against the iTunes store API
 """
 
 from itunes import COUNTRY, API_VERSION, BaseObject
-from base import NoResultsFoundException
+from .base import NoResultsFoundException
 
 __all__ = ['lookup', 'lookup_upc', 'Lookup', 'LookupUPC']
 

@@ -40,7 +40,7 @@ class BaseObject(object):
     resource = None
 
     def __init__(self, **kwargs):
-        self._search_terms = {k: v for (k, v) in kwargs.items()
+        self._search_terms = {k: v for (k, v) in list(kwargs.items())
                               if v is not None}
         self.json = None
         self.num_results = None
@@ -331,7 +331,7 @@ class Software(Track):
 
     def _set_current_version_release_date(self, json):
         self.current_version_release_date = None
-        if json.has_key('currentVersionReleaseDate') and json['currentVersionReleaseDate']:
+        if 'currentVersionReleaseDate' in json and json['currentVersionReleaseDate']:
             self.current_version_release_date = datetime.strptime(json['currentVersionReleaseDate'], TS_FORMAT)
 
 
